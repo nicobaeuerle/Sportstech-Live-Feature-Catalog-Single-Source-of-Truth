@@ -20,11 +20,11 @@
     --flagship-color: #E30613;
     --sgym-color: #4a4a4a;
   }
-
+ 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: 'Barlow', sans-serif;
     background: #0a0a0a;
@@ -32,7 +32,7 @@
     font-size: 15px;
     line-height: 1.6;
   }
-
+ 
   /* HERO */
   .hero {
     position: relative;
@@ -43,7 +43,7 @@
     padding: 80px 60px 60px;
     background: #0a0a0a;
   }
-
+ 
   .hero::before {
     content: '';
     position: absolute;
@@ -52,7 +52,7 @@
     background: radial-gradient(circle, rgba(227,6,19,0.18) 0%, transparent 65%);
     pointer-events: none;
   }
-
+ 
   .hero::after {
     content: '';
     position: absolute;
@@ -60,9 +60,9 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(227,6,19,0.4), transparent);
   }
-
+ 
   .hero-inner { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; width: 100%; }
-
+ 
   .hero-eyebrow {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 12px;
@@ -75,7 +75,7 @@
     align-items: center;
     gap: 12px;
   }
-
+ 
   .hero-eyebrow::after {
     content: '';
     display: block;
@@ -83,7 +83,7 @@
     height: 1px;
     background: var(--red);
   }
-
+ 
   .hero h1 {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(48px, 7vw, 90px);
@@ -93,9 +93,9 @@
     letter-spacing: -1px;
     margin-bottom: 24px;
   }
-
+ 
   .hero h1 span { color: var(--red); }
-
+ 
   .hero-sub {
     font-size: 16px;
     color: #aaa;
@@ -103,20 +103,20 @@
     font-weight: 400;
     line-height: 1.7;
   }
-
+ 
   .hero-meta {
     margin-top: 36px;
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
   }
-
+ 
   .hero-meta-item {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
-
+ 
   .hero-meta-label {
     font-size: 10px;
     font-weight: 700;
@@ -124,13 +124,13 @@
     text-transform: uppercase;
     color: var(--gray-text);
   }
-
+ 
   .hero-meta-value {
     font-size: 13px;
     font-weight: 600;
     color: #ccc;
   }
-
+ 
   /* FILTER BAR */
   .filter-bar {
     position: sticky;
@@ -141,7 +141,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.06);
     padding: 14px 60px;
   }
-
+ 
   .filter-bar-inner {
     max-width: 1400px;
     margin: 0 auto;
@@ -150,7 +150,7 @@
     gap: 8px;
     flex-wrap: wrap;
   }
-
+ 
   .filter-label {
     font-size: 11px;
     font-weight: 700;
@@ -159,7 +159,7 @@
     color: var(--gray-text);
     margin-right: 8px;
   }
-
+ 
   .filter-btn {
     padding: 7px 18px;
     border-radius: 4px;
@@ -173,23 +173,23 @@
     transition: all 0.2s;
     letter-spacing: 0.3px;
   }
-
+ 
   .filter-btn:hover { border-color: rgba(255,255,255,0.25); color: #fff; }
-
+ 
   .filter-btn.active {
     background: var(--red);
     border-color: var(--red);
     color: #fff;
   }
-
+ 
   .filter-btn[data-filter="ios"].active { background: var(--ios-color); border-color: var(--ios-color); }
   .filter-btn[data-filter="android"].active { background: var(--android-color); border-color: var(--android-color); }
   .filter-btn[data-filter="flagship"].active { background: var(--flagship-color); border-color: var(--flagship-color); }
   .filter-btn[data-filter="sgym"].active { background: var(--sgym-color); border-color: var(--sgym-color); }
-
+ 
   /* MAIN CONTENT */
   .main { max-width: 1400px; margin: 0 auto; padding: 60px 60px 40px; }
-
+ 
   /* SECTION */
   .section {
     margin-bottom: 80px;
@@ -197,9 +197,9 @@
     transform: translateY(24px);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
-
+ 
   .section.visible { opacity: 1; transform: translateY(0); }
-
+ 
   .section-header {
     display: flex;
     align-items: center;
@@ -208,7 +208,7 @@
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(255,255,255,0.07);
   }
-
+ 
   .section-title {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
@@ -219,7 +219,7 @@
     align-items: center;
     gap: 14px;
   }
-
+ 
   .section-title::before {
     content: '';
     display: block;
@@ -228,7 +228,7 @@
     background: var(--red);
     border-radius: 2px;
   }
-
+ 
   .section-count {
     font-size: 12px;
     font-weight: 600;
@@ -239,17 +239,17 @@
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.07);
   }
-
+ 
   /* CARD GRID */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
-
+ 
   @media (max-width: 1100px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 680px) { .card-grid { grid-template-columns: 1fr; } }
-
+ 
   /* FEATURE CARD */
   .feature-card {
     background: var(--gray-dark);
@@ -261,27 +261,27 @@
     flex-direction: column;
     gap: 14px;
   }
-
+ 
   .feature-card:hover {
     transform: translateY(-3px);
     border-color: rgba(227,6,19,0.25);
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   }
-
+ 
   .card-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
   }
-
+ 
   .card-name {
     font-size: 16px;
     font-weight: 700;
     color: #fff;
     line-height: 1.3;
   }
-
+ 
   /* TAGS */
   .tag {
     flex-shrink: 0;
@@ -293,30 +293,30 @@
     border-radius: 4px;
     white-space: nowrap;
   }
-
+ 
   .tag-beta { background: rgba(139,92,246,0.2); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
   .tag-new { background: rgba(16,185,129,0.2); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
   .tag-flagship { background: rgba(227,6,19,0.15); color: #f87171; border: 1px solid rgba(227,6,19,0.3); }
   .tag-sgym { background: rgba(100,100,100,0.2); color: #aaa; border: 1px solid rgba(100,100,100,0.3); }
-
+ 
   .card-desc {
     font-size: 13px;
     color: #999;
     line-height: 1.6;
   }
-
+ 
   .card-divider {
     height: 1px;
     background: rgba(255,255,255,0.06);
   }
-
+ 
   .card-bullets {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 6px;
   }
-
+ 
   .card-bullets li {
     font-size: 12.5px;
     color: #bbb;
@@ -325,7 +325,7 @@
     gap: 8px;
     line-height: 1.5;
   }
-
+ 
   .card-bullets li::before {
     content: '';
     display: block;
@@ -336,7 +336,7 @@
     margin-top: 6px;
     flex-shrink: 0;
   }
-
+ 
   /* PLATFORM BADGES */
   .platform-row {
     display: flex;
@@ -344,7 +344,7 @@
     flex-wrap: wrap;
     margin-top: auto;
   }
-
+ 
   .platform-badge {
     font-size: 10px;
     font-weight: 700;
@@ -353,18 +353,18 @@
     border-radius: 4px;
     border: 1px solid transparent;
   }
-
+ 
   .platform-badge.active-ios { background: rgba(37,99,235,0.2); color: #60a5fa; border-color: rgba(37,99,235,0.35); }
   .platform-badge.active-android { background: rgba(22,163,74,0.2); color: #4ade80; border-color: rgba(22,163,74,0.35); }
   .platform-badge.active-flagship { background: rgba(227,6,19,0.15); color: #f87171; border-color: rgba(227,6,19,0.3); }
   .platform-badge.active-sgym { background: rgba(100,100,100,0.2); color: #aaa; border-color: rgba(100,100,100,0.35); }
-
+ 
   .platform-badge.inactive {
     background: transparent;
     color: rgba(255,255,255,0.18);
     border-color: rgba(255,255,255,0.07);
   }
-
+ 
   .platform-notes {
     font-size: 11px;
     color: #666;
@@ -373,7 +373,7 @@
     padding-top: 4px;
     border-top: 1px solid rgba(255,255,255,0.05);
   }
-
+ 
   /* FOOTER */
   footer {
     border-top: 1px solid rgba(255,255,255,0.07);
@@ -384,7 +384,7 @@
     flex-wrap: wrap;
     gap: 12px;
   }
-
+ 
   .footer-inner {
     max-width: 1400px;
     margin: 0 auto;
@@ -395,13 +395,13 @@
     flex-wrap: wrap;
     gap: 12px;
   }
-
+ 
   .footer-left {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
-
+ 
   .footer-version {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 14px;
@@ -410,13 +410,13 @@
     letter-spacing: 1px;
     color: #555;
   }
-
+ 
   .footer-notice {
     font-size: 11px;
     color: #444;
     letter-spacing: 0.5px;
   }
-
+ 
   .footer-logo {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 20px;
@@ -425,13 +425,13 @@
     letter-spacing: 1px;
     color: rgba(255,255,255,0.12);
   }
-
+ 
   .footer-logo span { color: rgba(227,6,19,0.4); }
-
+ 
   /* HIDDEN */
   .feature-card.hidden { display: none; }
   .section.all-hidden { display: none; }
-
+ 
   /* RESPONSIVE */
   @media (max-width: 768px) {
     .hero { padding: 60px 24px 40px; }
@@ -442,7 +442,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
@@ -465,7 +465,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- FILTER BAR -->
 <div class="filter-bar">
   <div class="filter-bar-inner">
@@ -477,10 +477,10 @@
     <button class="filter-btn" data-filter="sgym">sGYM</button>
   </div>
 </div>
-
+ 
 <!-- MAIN -->
 <main class="main" id="catalog"></main>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -491,7 +491,7 @@
     <div class="footer-logo">Sportstech <span>Live</span></div>
   </div>
 </footer>
-
+ 
 <script>
 const data = {
   "meta": {
@@ -735,31 +735,29 @@ const data = {
             "Accessible via burger menu",
             "Integrated with user fitness profile"
           ],
-          "platforms": { "ios": false, "android": false, "flagship": true, "sgym": true },
-          "platform_notes": "Confirmed on Flagship and sGYM burger menu."
+          "platforms": { "ios": true, "android": true, "flagship": true, "sgym": true },
+          "platform_notes": "Available on all platforms."
         },
         {
           "name": "Quick Start",
-          "tag": "Flagship only",
           "description": "Start a free training session without selecting a workout.",
           "bullets": [
             "Launch workout without program selection",
             "Session recorded with distance, speed, calories",
             "Visible in Activity History alongside regular workouts"
           ],
-          "platforms": { "ios": false, "android": false, "flagship": true, "sgym": false },
-          "platform_notes": "Flagship only."
+          "platforms": { "ios": true, "android": true, "flagship": true, "sgym": true },
+          "platform_notes": "Available on all platforms."
         },
         {
           "name": "LED Control",
-          "tag": "Flagship only",
           "description": "Toggle device LED lighting directly from the Home Feed header.",
           "bullets": [
             "LED on/off toggle in Home Feed header",
             "Current firmware version displayed alongside"
           ],
-          "platforms": { "ios": false, "android": false, "flagship": true, "sgym": false },
-          "platform_notes": "Hardware-specific feature. Flagship only."
+          "platforms": { "ios": true, "android": true, "flagship": true, "sgym": true },
+          "platform_notes": "Available on all platforms."
         },
         {
           "name": "Shop Devices",
@@ -768,8 +766,8 @@ const data = {
             "Accessible from burger menu",
             "Links to Sportstech device store"
           ],
-          "platforms": { "ios": false, "android": false, "flagship": true, "sgym": true },
-          "platform_notes": "Available in burger menu on Flagship and sGYM."
+          "platforms": { "ios": true, "android": true, "flagship": true, "sgym": true },
+          "platform_notes": "Available on all platforms."
         }
       ]
     },
@@ -779,7 +777,6 @@ const data = {
       "features": [
         {
           "name": "sGYM Login – QR Code",
-          "tag": "sGYM only",
           "description": "Device login via QR code scan using the Sportstech Live mobile app.",
           "bullets": [
             "QR code displayed on device screen",
@@ -1131,7 +1128,7 @@ const data = {
     }
   ]
 };
-
+ 
 // TAG STYLE MAP
 const tagClass = {
   'Beta': 'tag-beta',
@@ -1139,7 +1136,7 @@ const tagClass = {
   'Flagship only': 'tag-flagship',
   'sGYM only': 'tag-sgym'
 };
-
+ 
 // PLATFORM CONFIG
 const platformConfig = [
   { key: 'ios', label: 'iOS', activeClass: 'active-ios' },
@@ -1147,29 +1144,29 @@ const platformConfig = [
   { key: 'flagship', label: 'Flagship', activeClass: 'active-flagship' },
   { key: 'sgym', label: 'sGYM', activeClass: 'active-sgym' }
 ];
-
+ 
 function buildCard(feature) {
   const tagHtml = feature.tag
     ? `<span class="tag ${tagClass[feature.tag] || 'tag-new'}">${feature.tag}</span>`
     : '';
-
+ 
   const bulletsHtml = feature.bullets.map(b => `<li>${b}</li>`).join('');
-
+ 
   const platformsHtml = platformConfig.map(p => {
     const active = feature.platforms[p.key];
     return `<span class="platform-badge ${active ? p.activeClass : 'inactive'}">${p.label}</span>`;
   }).join('');
-
+ 
   const notesHtml = feature.platform_notes
     ? `<p class="platform-notes">${feature.platform_notes}</p>`
     : '';
-
+ 
   // Build data attributes for filtering
   const platformAttrs = platformConfig
     .filter(p => feature.platforms[p.key])
     .map(p => `data-${p.key}="true"`)
     .join(' ');
-
+ 
   return `
     <div class="feature-card" ${platformAttrs}>
       <div class="card-header">
@@ -1184,7 +1181,7 @@ function buildCard(feature) {
     </div>
   `;
 }
-
+ 
 function buildCatalog() {
   const catalog = document.getElementById('catalog');
   catalog.innerHTML = data.sections.map(section => {
@@ -1200,20 +1197,20 @@ function buildCatalog() {
     `;
   }).join('');
 }
-
+ 
 // FILTER LOGIC
 let activeFilter = 'all';
-
+ 
 function applyFilter(filter) {
   activeFilter = filter;
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.filter === filter);
   });
-
+ 
   document.querySelectorAll('.section').forEach(section => {
     const cards = section.querySelectorAll('.feature-card');
     let visibleCount = 0;
-
+ 
     cards.forEach(card => {
       if (filter === 'all' || card.dataset[filter] === 'true') {
         card.classList.remove('hidden');
@@ -1222,15 +1219,15 @@ function applyFilter(filter) {
         card.classList.add('hidden');
       }
     });
-
+ 
     section.classList.toggle('all-hidden', visibleCount === 0);
   });
 }
-
+ 
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
 });
-
+ 
 // SCROLL ANIMATIONS
 function checkVisibility() {
   document.querySelectorAll('.section').forEach(section => {
@@ -1240,7 +1237,7 @@ function checkVisibility() {
     }
   });
 }
-
+ 
 // INIT
 buildCatalog();
 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -1251,3 +1248,4 @@ setTimeout(checkVisibility, 100);
 </script>
 </body>
 </html>
+ 
